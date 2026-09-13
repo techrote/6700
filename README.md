@@ -27,8 +27,12 @@ The first node is intended to become useful for:
 
 ## Reference pack
 
-Start with [`docs/RAG_INDEX.md`](docs/RAG_INDEX.md). It points implementation agents to narrowly scoped, retrieval-friendly documents.
+Start with [`docs/RAG_INDEX.md`](docs/RAG_INDEX.md). It points implementation agents to narrowly scoped, retrieval-friendly documents. [`docs/PLAN_REVIEW.md`](docs/PLAN_REVIEW.md) records the corrections made before decomposition, and [`docs/workflow.json`](docs/workflow.json) is the machine-readable issue dependency graph.
 
 ## Execution
 
-GitHub issues are the executable work queue. Each issue contains a self-contained implementation prompt, prerequisites, acceptance criteria and evidence requirements.
+GitHub issues are the executable work queue. There are **28 staged issues**, each containing a self-contained implementation prompt, prerequisites, acceptance criteria and evidence requirements.
+
+Start at **issue #1**. Use `docs/workflow.json` to identify work that may proceed concurrently and tasks that are blocked by external prerequisites such as the second FTTP service.
+
+The final gate is **issue #28**, which requires programme-wide verification, cold-reboot recovery, security/exposure checks, backup restore evidence and documentation reconciliation before the node is considered handed over.
