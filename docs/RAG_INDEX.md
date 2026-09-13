@@ -16,7 +16,9 @@ Use the smallest relevant document set rather than loading the whole repository.
 | `EVIDENCE.md` | what evidence must be retained | commands, versions, logs, measurements |
 | `VERIFY.md` | final acceptance gates | verification, security, benchmark, recovery |
 | `DECISIONS.md` | accepted architectural choices and deferred choices | ADR, decision, rationale, revisit |
-| `ROADMAP.md` | issue order and dependencies | phase, prerequisite, milestone, dependency |
+| `ROADMAP.md` | human-readable programme phases and sequencing | phase, prerequisite, milestone, dependency |
+| `PLAN_REVIEW.md` | pre-implementation critique and corrections | omission, risk, review, correction, deferred |
+| `workflow.json` | machine-readable issue dependency graph | issue, depends_on, phase, parallelism, conditional |
 
 ## Retrieval rules
 
@@ -26,3 +28,4 @@ Use the smallest relevant document set rather than loading the whole repository.
 - Measurements are machine-specific. Do not generalise one benchmark into a universal hardware claim.
 - Security changes must preserve the rule that the automation network does not gain a route into the household LAN.
 - Prefer evidence-producing tasks before optimisation or hardware purchasing decisions.
+- For task selection, consult `workflow.json` before opening a large set of issues; then retrieve only the selected issue and the narrow documents it names.
